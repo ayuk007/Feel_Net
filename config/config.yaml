@@ -1,0 +1,43 @@
+# Data paths
+data:
+  raw_data_path: "data/twitter-entity-sentiment-analysis"
+  train_file: ".assets/data/twitter_training.csv"
+  test_file: ".assets/data/twitter_validation.csv"
+  tokenizer_path: "checkpoints/Sentiment_Analysis_tokenizer.json"
+
+# Model configuration
+model:
+  vocab_size: 30000
+  d_model: 256
+  num_heads: 16
+  n_layers: 3
+  dropout: 0.5
+  n_classes: 4
+  max_seq_len: 200
+
+# Training configuration
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  num_epochs: 10
+  device: "cuda"
+  save_every: 1
+  
+# Validation configuration
+validation:
+  max_batch: 10
+  
+# Paths
+paths:
+  checkpoints_dir: "checkpoints"
+  logs_dir: "logs"
+  tensorboard_dir: "runs/experiment"
+  
+# Class names
+classes:
+  names: ['Irrelevant', 'Negative', 'Neutral', 'Positive']
+  
+# Kaggle dataset
+kaggle:
+  dataset_id: "jp797498e/twitter-entity-sentiment-analysis"

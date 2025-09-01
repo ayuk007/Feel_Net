@@ -1,0 +1,14 @@
+torch
+torchvision
+torchaudio
+tokenizers
+transformers
+pandas
+numpy
+scikit-learn
+tensorboard
+streamlit
+plotly
+kagglehub
+pyyaml
+tqdm
